@@ -11,6 +11,9 @@ export default makeStyles((theme)=>({
       },
       heading: {
         color: 'rgba(0,183,255, 1)',
+        [theme.breakpoints.down('xs')]:{
+          fontSize: "3rem"
+        }
       },
       image: {
         marginLeft: '15px',
