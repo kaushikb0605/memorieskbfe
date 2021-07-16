@@ -59,10 +59,5 @@ export default makeStyles((theme) => ({
       backgroundColor:'lime',
 
     }
-  },
-  logout:{
-    [theme.breakpoints.down('sm')]:{
-      justifyContent:'flex-end'
-  }
   }
 }));
