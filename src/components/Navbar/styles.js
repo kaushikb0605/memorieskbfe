@@ -19,7 +19,7 @@ export default makeStyles((theme) => ({
     textDecoration:'none',
     fontSize: '2em',
     fontWeight: 300,
-    fontFamily:'BrushScript'
+    fontFamily:"Roboto"
   },
   image: {
     marginLeft: '10px',
