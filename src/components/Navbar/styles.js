@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { blue, deepPurple } from '@material-ui/core/colors';
+import { deepPurple } from '@material-ui/core/colors';
 
 export default makeStyles((theme) => ({
   appBar: {
@@ -10,43 +10,47 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 50px',
-    [theme.breakpoints.down('sm')]:{
-      padding:'5px 10px'
-    }
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
   },
   heading: {
-    color: 'rgba(0,183,255, 1)',
-    textDecoration: 'none',
-    [theme.breakpoints.down('sm')]:{
-        fontSize:"medium"
-    }
+    color: theme.palette.primary.main,
+    textDecoration:'none',
+    fontSize: '2em',
+    fontWeight: 300,
+    fontFamily:'BrushScript'
   },
   image: {
-    marginLeft: '15px',
-    [theme.breakpoints.down('sm')]:{
-      marginLeft:'5px',
-      marginRight:'2px'
-    }
+    marginLeft: '10px',
+    marginTop: '5px',
   },
   toolbar: {
     display: 'flex',
     justifyContent: 'flex-end',
     width: '400px',
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+    },
   },
   profile: {
     display: 'flex',
     justifyContent: 'space-between',
     width: '400px',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+      marginTop: 20,
+      justifyContent: 'center',
+    },
+  },
+  logout: {
+    marginLeft: '20px',
   },
   userName: {
     display: 'flex',
     alignItems: 'center',
-    [theme.breakpoints.down('sm')]:{
-      fontSize:'small',
-      paddingRight:'100px',
-      color:blue
-
-    }
+    textAlign: 'center',
   },
   brandContainer: {
     display: 'flex',
@@ -55,9 +59,5 @@ export default makeStyles((theme) => ({
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
-    [theme.breakpoints.down('sm')]:{
-      backgroundColor:'lime',
-
-    }
-  }
+  },
 }));
